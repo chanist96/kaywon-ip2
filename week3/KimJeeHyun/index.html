@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Interaction Programming - Part 2 : jQuery</title>
   
+  <title>Interaction Programming - Part 2 : jQuery</title>
 </head>
+
 <style media="screen">
   a {text-decoration: initial;color: #000;}
   .active {color: #FF6600}
@@ -47,8 +48,8 @@
       </li>
     </ul>
   </nav>
-  
-  
+
+
   <section>
     <div id="radioContainer">
       <input id="radio01" type="radio" name="radio01" value="1" />
@@ -61,20 +62,28 @@
   </section>
   <script type="text/javascript" src="./js/jquery.js"></script>
   <script type="text/javascript">
-    //$( "li" ).addClass( "active" );
-    $( "a.cls02" ).addClass( "current" );
-    $("li").eq(0).addClass("index-zero");
+    $( "li" ).addClass( "active" );
+    $("a.cls02").addClass("current");
+    $( "li" ).eq(0).addClass("index-zero");
+   // $( "li" ).eq(0).children("a").addClass("index-zero");
     alert($("#radioContainer").children().width());
-    alert($("a.cls02").parent().index());
-    var val = $('#radio01').val();
-    alert(val);
-    alert($('#radio01').val());
+    alert($(".cls02").parent().index());
+    alert($("input:radio").val());
     alert($('#radioContainer').children(1).val());
     alert($('#radio02').prevAll('input').val());
-    alert($("input:radio").val());
-    alert($('#radio03').parent().children(1).val());
-    alert($("li").children(7));
+    //radio01 input radio엘리먼트의 value를 출력하는 모든방법을 찾아봅시다
+    //menu07 텍스트를 포함하고 있는 a엘리먼트를 셀렉트할 수 있는 모든방법
+    alert($("ul li").eq(7));
+    alert($("#navigation").eq(7));
+    alert($("nav:has(ul)").children(7));
+    alert($("ul li:nth-child(7)"));
     
+    
+    
+    
+    
+   
   </script>
-  </body>
+</body>
+
 </html>

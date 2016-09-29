@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>Interaction Programming - Part 2 : jQuery</title>
-  
 </head>
 <style media="screen">
   a {text-decoration: initial;color: #000;}
@@ -47,8 +46,6 @@
       </li>
     </ul>
   </nav>
-  
-  
   <section>
     <div id="radioContainer">
       <input id="radio01" type="radio" name="radio01" value="1" />
@@ -61,20 +58,31 @@
   </section>
   <script type="text/javascript" src="./js/jquery.js"></script>
   <script type="text/javascript">
-    //$( "li" ).addClass( "active" );
-    $( "a.cls02" ).addClass( "current" );
-    $("li").eq(0).addClass("index-zero");
-    alert($("#radioContainer").children().width());
-    alert($("a.cls02").parent().index());
-    var val = $('#radio01').val();
-    alert(val);
-    alert($('#radio01').val());
-    alert($('#radioContainer').children(1).val());
-    alert($('#radio02').prevAll('input').val());
-    alert($("input:radio").val());
-    alert($('#radio03').parent().children(1).val());
-    alert($("li").children(7));
-    
+      
+      /*Q7
+      var i = function () {
+          alert($(".cls02").parent().index());
+      }
+      i();
+      */
+      
+     /*Q8
+     var s = function(){
+       //alert($('#radio01').val());
+       //alert($('#radio02').prevAll('input').val());
+       //alert($('input:first').val());
+       //alert($('input:last').prevAll('#radio01').val());
+       //alert($('#radioContainer').children('#radio01').val());
+     };
+     s();
+     */
+      
+    //Q9 menu07 텍스트를 포함하고 있는 a엘리먼트를 셀렉트 할 수 있는 모든 방법을 찾아봅시다.
+    //console.log($('.last').prev().prev());
+    //console.log($('li:last').prev().prev());
+    //console.log($('li').eq(6));
+    //console.log($('li').eq(5).next());
+    //console.log($('li').eq(7).prev());
   </script>
-  </body>
+</body>
 </html>
